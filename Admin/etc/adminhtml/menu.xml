@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="I95dev_Admin::parent" title="parent" module="I95dev_Admin" sortOrder="51" resource="I95dev_Admin::parent"/>
+        <add id="I95dev_Admin::child1" title="child1" module="I95dev_Admin" sortOrder="10" action="hello/index/index" resource="I95dev_Admin::child1" parent="I95dev_Admin::parent"/>
+        <add id="I95dev_Admin::child2" title="child2" module="I95dev_Admin" sortOrder="99" parent="I95dev_Admin::parent" action="hello/index/post" resource="I95dev_Admin::child2"/>
+    </menu>
+</config>
