@@ -1,0 +1,35 @@
+<?php
+$productCollection = $block->getProductCollection();
+foreach ($productCollection as $product) {
+    print_r($product->getData());     
+    echo "<br>";
+}
+?>
+<?php
+$custID = 1;
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerObj = $objectManager->create('Magento\Customer\Model\Customer')
+->load($custID);
+$customerEmail = $customerObj->getEmail();
+$customerFirstName = $customerObj->getFirstname();
+echo "customer_FirstName :" ." ". $customerFirstName."</br>";
+echo "customer_email : " ." ". $customerEmail;
+?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+ 
+$customerFactory = $objectManager->create('Magento\Customer\Model\CustomerFactory')->create();
+ 
+//Get customer collection
+$customerCollection = $customerFactory->getCollection()
+        ->addAttributeToSelect("*")
+        ->load();
+ 
+if ($customerCollection && count($customerCollection) > 0) {
+    foreach ($customerCollection AS $customer) {
+        echo $customer->getFirstname() . "<br/>";
+       
+    }
+}
+?>
+
