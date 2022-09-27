@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="I95dev\Allplugins\Controller\Index\Example">
+        <plugin name="I95dev_Allplugins_Plugin" type="I95dev\Allplugins\Plugin\Allplugin" sortOrder="10"  />
+    </type>
+</config>
